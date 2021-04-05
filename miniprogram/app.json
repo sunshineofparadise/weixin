@@ -12,10 +12,11 @@
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
+    "pages/user/user",
     "pages/im/room/room"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#F5F5F5",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "歌者的小程序",
@@ -38,7 +39,7 @@
     },{  
       "selectedIconPath": "images/icon-user-selected.png",  
       "iconPath": "images/icon-user.png",  
-      "pagePath": "pages/addFunction/addFunction",  
+      "pagePath": "pages/user/user",  
       "text": "我的"  
     }]
   },

@@ -11,7 +11,8 @@ Page({
     takeSession: false,
     requestResult: '',
     canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') // 如需尝试获取用户信息可改为false
+    // canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') // 如需尝试获取用户信息可改为false
+    canIUseOpenData: false // 如需尝试获取用户信息可改为false
   },
 
   bindViewTap:function(){
@@ -21,12 +22,13 @@ Page({
 
   onLoad: function() {
     if (!wx.cloud) {
+      // 重定向到初始化失败页面
       wx.redirectTo({
         url: '../chooseLib/chooseLib',
       })
       return
     }
-  
+    // 可调用用户信息
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true,
@@ -44,11 +46,13 @@ Page({
           userInfo: res.userInfo,
           hasUserInfo: true,
         })
+        console.log(res.userInfo)
       }
     })
   },
 
   onGetUserInfo: function(e) {
+    console.log("============getUserProfile")
     if (!this.data.logged && e.detail.userInfo) {
       this.setData({
         logged: true,
