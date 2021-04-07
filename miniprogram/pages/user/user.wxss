@@ -1,12 +1,5 @@
 /**index.wxss**/
 
-page {
-  /* background: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; */
-}
-
 .userinfo, .uploader, .tunnel {
   height: 140rpx;
   width: 100%;
@@ -20,9 +13,15 @@ page {
   transition: all 300ms ease;
 }
 
+.container {
+  margin: 0 20rpx;
+  margin-top: -160rpx;
+}
+
 .userinfo {
   padding-left: 60rpx;
   background: #ff6700;
+  padding-bottom: 200rpx;
 }
 
 .userinfo-login {
@@ -50,7 +49,7 @@ page {
 
 .container-box {
   background: #fff;
-  border-radius: 10rpx;
+  border-radius: 20rpx;
   width: 100%;
   display: flex;
   justify-content: space-around;

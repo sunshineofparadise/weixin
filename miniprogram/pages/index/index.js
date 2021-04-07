@@ -3,7 +3,16 @@ const app = getApp()
 
 Page({
   data: {
-    name: 'xiaozheng',
+    defaultData: {
+      title: "我的主页", // 导航栏标题
+    },
+    list: [
+      'https://upload-images.jianshu.io/upload_images/13748187-93b3a5e859d416f0.png',
+       'https://upload-images.jianshu.io/upload_images/13748187-8dcad27002ca12f7.png',
+       'https://upload-images.jianshu.io/upload_images/13748187-35730a122f80bb5e.png',
+       'https://upload-images.jianshu.io/upload_images/13748187-4bcc45bb7091827a.png'
+      ],
+      active: 1,
     avatarUrl: './user-unlogin.png',
     userInfo: {},
     hasUserInfo: false,
@@ -14,9 +23,11 @@ Page({
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') // 如需尝试获取用户信息可改为false
   },
 
-  bindViewTap:function(){
-    console.log("=============hly","handleTap1")
-    
+  bindViewTap:function(e){
+    // console.log(e.currentTarget.dataset['index'])
+    this.setData({
+      active: e.currentTarget.dataset['index'],
+    })
     },
 
   onLoad: function() {

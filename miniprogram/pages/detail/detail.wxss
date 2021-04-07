@@ -1,0 +1,53 @@
+.content-detail .img-title {
+  width: 100%;
+  /* height: 300rpx; */
+}
+.margin {
+  margin: 0 20rpx;
+}
+.detail-title {
+  font-size: 40rpx;
+  font-weight: bold;
+  margin-top: 30rpx;
+}
+.auto-box {
+  margin: 30rpx 20rpx;
+}
+.touxiang {
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-image: url('http://n1-q.mafengwo.net/s11/M00/FC/94/wKgBEFrB0MiAZC2uABwrWX7ZArg04.jpeg');
+  background-repeat: round;
+}
+.auto-msg {
+  display: inline-block;
+  vertical-align: super;
+  margin-left: 30rpx;
+}
+.auto-msg view:first-child, .content-title {
+  font-size: 30rpx;
+  line-height: 55rpx;
+  font-weight: bold;
+}
+.auto-msg view:last-child {
+  font-size: 22rpx;
+  color: #999;
+}
+.content-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin: 20rpx 0 10rpx 0;
+}
+.content-text {
+  font-size: 28rpx;
+  line-height: 1.7;
+  color: #333;
+}
+.msg-content {
+  border-radius: 10rpx;
+  margin: 20rpx 0;
+  width: 100%;
+  /* height: 400rpx; */
+}

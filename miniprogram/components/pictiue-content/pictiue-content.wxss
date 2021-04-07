@@ -1,0 +1,33 @@
+.picture-box {
+  margin: 0 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pictiue-content {
+  display: inline-block;
+  width: 47%;
+  margin-top: 20rpx;
+}
+.content-img {
+  width: 100%;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+.pictiue-content .item-title {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.pictiue-content .item-num {
+  font-size: 20rpx;
+  color: #999;
+}
+.pictiue-content .item-tip {
+  display: inline-block;
+  font-size: 22rpx;
+  border: 1rpx solid #ff6700;
+  color: #ff6700;
+  margin: 0 10rpx 10rpx 0;
+  padding: 1rpx 7rpx;
+  border-radius: 5rpx;
+}

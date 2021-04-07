@@ -3,8 +3,7 @@ const app = getApp()
 
 Page({
   data: {
-    name: 'xiaozheng',
-    avatarUrl: './user-unlogin.png',
+    avatarUrl: 'https://upload-images.jianshu.io/upload_images/13748187-ddcbd27a1ab37cae.png?imageMogr2/auto-orient/strip|imageView2/2/w/128/format/webp',
     userInfo: {},
     hasUserInfo: false,
     logged: false,

@@ -1,0 +1,10 @@
+<navigator class="picture-box" url="/pages/detail/detail" open-type="navigate">
+  <view class="pictiue-content" wx:for="{{list}}" wx:key="*this" wx:for-item="item">
+    <image src="{{item.img}}" class="content-img"></image>
+    <view class="item-title">{{item.title}}</view>
+    <view class="item-num">{{item.num}}人体验过</view>
+    <view>
+      <view class="item-tip" wx:for="{{item.list}}" wx:key="*this"  wx:for-item="val">{{val}}</view>
+    </view>
+  </view>
+</navigator>

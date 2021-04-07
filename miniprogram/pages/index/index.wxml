@@ -1,83 +1,28 @@
 <!--index.wxml-->
-<view class="container">
-
-  <!-- 用户 openid -->
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}" class="userinfo-opendata">
-      <!-- bindtap点击事件在同一个view中会向上冒泡,而catchtap 不会向上冒泡 -->
-      <view class="userinfo-block-avatar" bindtap="bindViewTap">
-        <!-- 用于展示微信开放的数据。 -->
-        <open-data type="userAvatarUrl"></open-data>
-        <!-- <open-data type="userAvatarUrl"></open-data> -->
-        <open-data type="userNickName"></open-data>
-      </view>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button 
-        wx:if="{{canIUseGetUserProfile}}" 
-        bindtap="getUserProfile"
-        class="userinfo-avatar"
-        style="background-image: url({{avatarUrl}})"
-        size="default"
-      >123</button>
-      <button
-        wx:else
-        open-type="getUserInfo" 
-        bindgetuserinfo="onGetUserInfo"
-        class="userinfo-avatar"
-        style="background-image: url({{avatarUrl}})"
-        size="default"
-      >456</button>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-block-avatar" src="{{avatarUrl}}" mode="cover"></image>789
-    </block>
-    <view class="userinfo-nickname-wrapper">
-      <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
-    </view>
-
-    
+<view>
+  <!-- 自定义顶部栏 -->
+  <navigation-bar default-data="{{defaultData}}"></navigation-bar>
+  <view style="position: relative;">
+    <view class="background-img"></view>
+  </view>
+  <!-- 轮播图 -->
+  <view class="lunbo">
+    <swiper indicator-dots autoplay circular style="height: 400rpx">
+      <block wx:for="{{list}}" wx:key="*this">
+          <swiper-item style="border-radius: 20rpx;overflow: hidden;">
+            <image src="{{item}}" style="width: 100%;"></image>
+          </swiper-item>
+        </block>
+    </swiper>
   </view>
 
-
-  <!-- 上传图片 -->
-  <view class="uploader">
-    <view class="uploader-text" bindtap="doUpload">
-      <text>上传图片</text>
-    </view>
-    <view class="uploader-container" wx:if="{{imgUrl}}">
-      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
-    </view>
+  <view class="tab">
+    <view bindtap="bindViewTap" data-index="1" class="tab-item {{active==1?'active':''}}">必体验</view>
+    <view bindtap="bindViewTap" data-index="2" class="tab-item {{active==2?'active':''}}">攻略</view>
+    <view bindtap="bindViewTap" data-index="3" class="tab-item {{active==3?'active':''}}">游记</view>
+    <view bindtap="bindViewTap" data-index="4" class="tab-item {{active==4?'active':''}}">问答</view>
   </view>
 
-
-  <!-- 操作数据库 -->
-  <view class="uploader">
-    <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
-      <text>前端操作数据库</text>
-    </navigator>
-  </view>
-
-  <!-- 即时通信 -->
-  <view class="uploader">
-    <navigator url="../im/im" open-type="navigate" class="uploader-text">
-      <text>即时通信 Demo</text>
-    </navigator>
-  </view>
-
-  <!-- 新建云函数 -->
-  <view class="uploader">
-    <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
-      <text>快速新建云函数</text>
-    </navigator>
-  </view>
-
-  <!-- 云调用 -->
-  <view class="uploader">
-    <navigator url="../openapi/openapi" open-type="navigate" class="uploader-text">
-      <text>云调用</text>
-    </navigator>
-  </view>
-
+  <pictiue-content></pictiue-content>
 
 </view>

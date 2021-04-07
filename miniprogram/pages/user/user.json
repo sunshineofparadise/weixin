@@ -1,6 +1,4 @@
 {
   "navigationBarTitleText": "个人中心",
-  "usingComponents": {},
-  "navigationBarBackgroundColor": "#ff6700",
-  "navigationBarTextStyle":"white"
+  "usingComponents": {}
 }

@@ -38,7 +38,7 @@
     </block>
     
   </view>
-  <view class="container" style="margin: 0 20rpx">
+  <view class="container">
     <view class="container-box">
       <view class="like-me">
         <view>1109</view>
@@ -46,7 +46,8 @@
       </view>
       <view class="like-me">
         <view>
-          <view class="userinfo-block-avatar" style="background-image: url('./user.jpg');color: #fff;font-size: small;">131</view>
+          <view class="userinfo-block-avatar" 
+          style="background-image: url('https://upload-images.jianshu.io/upload_images/13748187-af079c09f977b2d4.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1080/format/webp');color: #fff;font-size: small;">131</view>
         </view>
         <view>喜欢我的</view>
       </view>
